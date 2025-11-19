@@ -9,7 +9,11 @@
 extern "C" {
 #endif
 
-#define PROGRAM_INFO_STR(name, version) "program_info:" "{\"name\":\"" name "\",\"version\":\"" version "\"}\n"
+#if M039_DEBUG
+#define PROGRAM_INFO_STR(name, version) "program_info:" "{\"name\":\"" name "\",\"version\":\"" version "d\"}\n"
+#else 
+#define PROGRAM_INFO_STR(name, version) "program_info:" "{\"name\":\"" name "\",\"version\":\"" version "r\"}\n"
+#endif
 
 int logd( const char* format, ... );
 
