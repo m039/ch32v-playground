@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <m039.h>
 
 #define L1 PD6
 #define L2 PA2
@@ -98,6 +99,7 @@ void setLed(uint8_t index) {
 }
 
 void setup() {
+  PROGRAM_INFO("Charlieplexing", "1.0.0");
 }
 
 uint8_t counter = 0;
